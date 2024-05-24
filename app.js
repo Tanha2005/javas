@@ -70,7 +70,9 @@ const updateExchangeRate = async () => {
         if (currencies === toCurr.value.toLowerCase()) {
             const rate = allCurrencies[currencies];
             const convertedAmount = amount * rate;
-            output.innerText = `${amount} ${fromCurr.value} = ${convertedAmount} ${toCurr.value}`;
+            output.innerText = `${amount} ${fromCurr.value} = ${convertedAmount.toFixed(2)} ${
+                toCurr.value
+            }`;
         }
     }
 };
