@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Currency Converter</title>
-        <link rel="stylesheet" href="style1.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -12,34 +11,53 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <div class="container">
-            <h2>Currency Converter</h2>
-            <form>
-                <div class="amount">
-                    <p>Enter Ammount</p>
-                    <input value="1" type="text" />
+    <body class="bg-zinc-800 h-screen flex items-center justify-center p-4 text-zinc-400">
+        <div
+            class="container w-full max-w-[500px] ring-2 ring-zinc-600 rounded-xl p-4 flex flex-col items-center"
+        >
+            <h2 class="text-2xl relative">
+                Currency Converter <br /><span class="text-xs absolute -bottom-4 right-0"
+                    >By Tanha</span
+                >
+            </h2>
+            <form class="flex flex-col w-full">
+                <div class="amount my-8">
+                    <p class="mb-2">Enter Amount</p>
+                    <input
+                        class="w-full bg-transparent ring-2 ring-zinc-700 outline-none px-4 py-1 rounded-full"
+                        value="1"
+                        type="text"
+                    />
                 </div>
-                <div class="dropdown">
+                <div class="dropdown flex justify-between items-end">
                     <div class="from">
-                        <p>Form</p>
-                        <div class="select-container">
-                            <img src="https://flagsapi.com/US/flat/64.png" />
-                            <select name="from"></select>
+                        <p>From</p>
+                        <div
+                            class="select-container flex items-center gap-1 ring-2 ring-zinc-700 rounded p-1"
+                        >
+                            <img class="w-10 rounded" src="https://flagsapi.com/US/flat/64.png" />
+                            <select class="bg-transparent outline-none" name="from"></select>
                         </div>
                     </div>
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <i class="fa-solid fa-arrow-right-arrow-left -translate-y-4"></i>
                     <div class="to">
                         <p>To</p>
-                        <div class="select-container">
-                            <img src="https://flagsapi.com/BD/flat/64.png" />
-                            <select name="to"></select>
+                        <div
+                            class="select-container flex items-center gap-1 ring-2 ring-zinc-700 rounded p-1"
+                        >
+                            <img class="w-10 rounded" src="https://flagsapi.com/BD/flat/64.png" />
+                            <select class="bg-transparent outline-none" name="to"></select>
                         </div>
                     </div>
                 </div>
-                <div class="msg">1USD = 80INR</div>
-                <button>Get Exchange Rate</button>
+                <div class="msg text-center rounded font-bold text-lg my-8"></div>
+                <button
+                    class="bg-zinc-950 p-4 outline-none active:scale-95 transition-all rounded-lg"
+                >
+                    Get Exchange Rate
+                </button>
             </form>
         </div>
         <script src="script1.js"></script>
